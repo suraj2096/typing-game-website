@@ -1,0 +1,142 @@
+/* main container in which all child reside */
+.parentContainer{
+    width: 100%;
+    height: 42vw;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* child container in which first and second child reside */
+.childContainer{
+    width: 60%;
+    height: 80%;
+    /* border: 2px solid yellow; */
+    display: flex;
+    position: relative;
+    box-shadow: 9px -5px 17px 0.5px #b0b0b0, -14px -6px 17px 0.5px #888887;
+}
+
+/* first child  */
+.childContainer .firstChild{
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid green; */
+  overflow: hidden;
+  border-radius: 6px;
+  
+}
+/* here is the slider div */
+.firstChild .slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.childContainer .firstChild img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* navigation buttons here */
+.childContainer .navigation{
+    width: 50%;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+
+}
+.childContainer .navigation .first, .second,.third,.forth{
+    width: 13px;
+    height: 13px;
+    margin: 0px 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+/* second child */
+.childContainer .secondChild{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+    background: linear-gradient(#00ffff,#ae8e8e);
+    border-radius: 6px;
+}
+.secondChild .image{
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid black; */
+    /* background-color: aliceblue; */
+    text-align: center;
+}
+.secondChild .image img{
+    width: 27%;
+    height: 126px;
+    margin-top: 36px;
+    border: 1px;
+    border-radius: 50%;
+}
+.secondChild h2{
+    padding: 9px 0px;
+    font-size: 2rem;
+}
+/* form styling here */
+.formParent{
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.formParent .form{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px;
+}  
+.formParent .form  input{
+    border-top: 0px;
+    padding: 11px 13px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    outline: none;
+    margin: 12px 0px;
+    font-size: 1rem;
+    border-right: 0px;
+    border-left: 0px;
+}
+.formParent .form button{
+    width: 100%;
+    padding: 13px 4px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin: 20px auto;
+    font-size: 20px;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.formParent .anchor {
+    display: block;
+    text-align: center;
+    animation: margi;
+    padding: 18px 0px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+    cursor: pointer;
+}
+.thirdChild h2{
+    display: inline;
+    /* padding: 38px 0px; */
+    /* margin: 41px 0px; */
+    /* position: relative; */
+    /* top: 7px; */
+    color: white;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+     padding: 0px 30px;
+}

@@ -1,0 +1,107 @@
+.grandparenthome{
+    display: flex;
+    min-width: 90vw;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid gray; */
+    background: url('../images/allbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+.grandparenthome .parenthome{
+    width: 60%;
+    height: 75vh;
+    /* border: 2px solid red; */
+     border: 2px solid black;
+     border-radius: 15px;
+     box-shadow: 5px -4px 12px 3px black, -5px -4px 12px 3px black;
+    /* z-index: 1; */
+}
+.parenthome .firstchildhome{
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 2px solid green; */
+    height: 15%;
+    text-align: center;
+}
+.firstchildhome h1{
+    font-size: 2.4rem;
+    color: white;
+    color: black;
+    /* line-height: 4rem; */
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding: 13px 15px;
+}
+.parenthome .cardsofhome{
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 2px solid yellow; */
+    height: 85%;
+    display: flex;
+}
+.cardsofhome .cardfirstchild{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background:url('../images/carcard.jpeg');
+    z-index: 5;
+    opacity:2;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+.cardfirstchild a{
+    position: absolute;
+    left: 11rem;
+    bottom: 50px;
+    text-decoration: none;
+    font-size: 2ren;
+    color: white;
+    padding: 15px 20px;
+    width: 30%;
+    text-align: center;
+}
+.abutton{
+    border: 1px solid white;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 2s ease-in-out;
+    font-weight: bold;
+}
+.abutton:hover{
+    transform: scale(1.2);
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 1rem;
+}
+.cardsofhome .cardsecondchild{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: url('../images/type\ bak.jpg');
+    z-index: 5;
+    opacity:2;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+.cardsecondchild a{
+    position: absolute;
+    left: 11rem;
+    bottom: 50px;
+    text-decoration: none;
+    font-size: 2ren;
+    color: white;
+    padding: 15px 20px;
+    width: 30%;
+    text-align: center;
+}

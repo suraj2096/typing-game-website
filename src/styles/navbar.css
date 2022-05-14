@@ -1,0 +1,111 @@
+
+.navbar{
+    height: 100%;
+    /* height: 45px; */
+    padding:12px 0px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    background-color: rgb(92, 99, 92);
+}
+/*
+.navbar::before{
+    content: '';
+    background: url('../images/carback.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    position: absolute;
+    /* top:35px; */
+    /* z-index: -2; */
+    /* opacity: 0.7; */
+   /* width: 100vw; */
+   /* height: 100vh;  here in this doubr */
+/* }  */
+.navbar h1{
+    width: 20%;
+    /* border: 2px solid black; */
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.7rem;
+    color: white;
+   
+}
+.navbar .secondChild{
+    width: 55%;
+    /* border: 1px solid black; */
+}
+.navbar .secondChild ul{
+    display: flex;
+    list-style: none;
+    padding: 6px 0px;
+}
+.navbar .secondChild ul li{
+    padding: 7px 9px;
+   
+}
+.secondChild ul li  a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-style: bold;
+    text-transform: uppercase;
+    transition: all 2s;
+}
+
+.secondChild ul li a:hover{
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color:white;
+    color: black;
+}
+.navbar .thirdChild{
+    width: 20%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+/* button css here */
+.thirdChild a{
+    text-decoration: none;
+    position: relative;
+    /* top: 15px; */
+    left: 14px;
+    color: white;
+    font-size: 1rem;
+}
+.btn{
+    /* border: 2px solid black; */
+    /* margin: 0px 10px; */
+    padding: 11px 25px;
+    border-radius: 9px;
+    transition: all 2s ;
+    cursor: pointer;
+}
+
+.thirdChild a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* here the css for displayMessage component  */
+.message{
+    width: 98%;
+    margin: 2px auto;
+    height: 48px;
+    background-color: #a1ff0f;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 11px;
+    color: black;
+
+}
+.message p{
+    padding: 2px 4px;
+    font-size: 21px;
+}

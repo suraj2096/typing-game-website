@@ -1,0 +1,86 @@
+/* parent styling here  */
+.historyparent{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#ffefa6,#aefffb);
+    background-size: 100% 100%;
+}
+.parenttable{
+    width: 60%;
+    min-height: 85vh;
+    background: linear-gradient(rgb(242 246 136),#ebe7e7);
+    border-radius: 12px;
+    padding-bottom: 10px;
+}
+.heading-history{
+    width: 100%;
+    text-align: center;
+    padding: 21px 0px;
+    font-size: 12px;
+}
+.heading-history h2{
+    font-size: 3rem;
+    letter-spacing: 5.2px;
+    word-spacing: 4px;
+    /* color: black; */
+    /* color: white; */
+    font-weight: bold;
+}
+
+
+
+/* table css */
+.tablehistory{
+    width: 100%;
+    margin-top: 12px;
+    padding: 34px 0px;
+
+}
+.tablehistory .historydiv{
+    font-size: 3rem;
+    word-spacing: 2px;
+    text-align: center;
+    padding: 12px 11px;
+    letter-spacing: 4px;
+}
+.tables{
+    font-family: 'Montserrat', sans-serif,'Ubuntu', sans-serif;
+    width: 90%;
+    margin: auto;
+    box-shadow: -7px 2px 7px 0px;
+}
+
+#table{
+    font-family: 'Montserrat', sans-serif,'Ubuntu', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+     border-bottom: 5px solid #060606;
+     background: white;
+   
+}
+#table th{
+    font-family: 'Montserrat', sans-serif,'Ubuntu', sans-serif;
+    padding: 18px 26px;
+    margin: 11px 10px;
+    background-color: #0f1010;
+    color: white;
+    border-right-style: ridge;
+    text-align: left;
+    font-size: 1.2em;
+}
+#table th:last-child{
+    border-right-style: none;
+}
+#table td, #customers th {
+    font-family: 'Montserrat', sans-serif,'Ubuntu', sans-serif;
+    border: 1px solid #ddd;
+    border-style: groove;
+    padding: 8px 27px;
+    font-size: 1.2rem;
+  }
+#table tr:hover{
+    background-color: #ddd;
+}
