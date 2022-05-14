@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer');
-const MAIL_PASSWORD = require('../secure/pass');
+const {MAIL_PASSWORD,username} = require('../pass');
 
 const send = async (url,signupuser,title,desc)=>{
 // here we create a transporter who will send mail it will contain service name and authortication detail
 let mailTransport = nodemailer.createTransport({
   service: 'gmail',
   auth:{
-    user:"surajgusain2002@gmail.com",
+    user:username,
     pass:MAIL_PASSWORD
   },
   tls:{
