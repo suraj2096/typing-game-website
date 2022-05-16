@@ -1,9 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../styles/home.css'
 import {Link} from 'react-router-dom'
 import Logincontext from '../contexts/login/Logincontext'
 function Home() {
   const {setChooseGame} = useContext(Logincontext);
+  useEffect(()=>{
+    setChooseGame("");
+})
   let cargameonclick = ()=>{
          setChooseGame("cartype");
   }

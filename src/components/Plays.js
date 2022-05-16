@@ -6,9 +6,10 @@ import '../styles/plays.css'
 const  Plays=(props)=>{
     // this useeffect is used for typing game code so please distinguish very carefully
     let navigate = useNavigate();
-    const {setdislogout,name} = useContext(Logincontext);
+    const {setdislogout,name,setChooseGame} = useContext(Logincontext);
     const callresetgame = useRef(null);
     useEffect(()=>{
+        setChooseGame("simpletype");
         // here we will reset the game 
         setdislogout(false)
         const typingText = document.querySelector(".typing-text p");

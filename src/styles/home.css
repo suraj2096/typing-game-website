@@ -1,7 +1,7 @@
 .grandparenthome{
     display: flex;
     min-width: 90vw;
-    min-height: 90vh;
+    min-height: 85vh;
     justify-content: center;
     align-items: center;
     /* border: 2px solid gray; */

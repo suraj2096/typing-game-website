@@ -4,19 +4,19 @@
     /* min-height: 120vh; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     /* border: 2px solid red; */
     background: linear-gradient(rgb(40, 224, 86),rgb(202, 255, 116));
-    height: 90vh;
+    height: 120vh;
 }
 .profile{
     margin-top: 2%;
-    padding: 40px 11px;
+    padding: 24px 11px;
     /* background-color: aqua; */
     border: 1px solid white;
     background: linear-gradient(rgb(98, 239, 255),rgb(164, 164, 255));
     border-radius: 10px;
-    height: 80vh;
+    height: 110vh;
     width: 70%;
 }
 .logo{

@@ -9,7 +9,7 @@
     background-size: 100% 100%;
 }
 .parenttable{
-    width: 60%;
+    width: 65%;
     min-height: 85vh;
     background: linear-gradient(rgb(242 246 136),#ebe7e7);
     border-radius: 12px;
@@ -83,4 +83,9 @@
   }
 #table tr:hover{
     background-color: #ddd;
+}
+@keyframes leader {
+    50%{
+        opacity: 1;
+    }
 }
