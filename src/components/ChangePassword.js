@@ -8,7 +8,7 @@ import Logincontext from '../contexts/login/Logincontext'
 import scroll from '../scoller'
 import { useEffect,useState,useContext } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-const ChangePassword = () => {
+const ChangePassword = (props) => {
   const location = useLocation();
   const params = useParams();
   const navigation = useNavigate();
@@ -20,6 +20,7 @@ const ChangePassword = () => {
         let submit = document.querySelector('#continue');
         submit.innerText = "Please wait...";
         // here we will call forget password link generate api
+        props.setprogress(10)
         const url = "http://localhost:8000/user/forgetpassword";
         const forpass = await fetch(url,{
           method:'post',
@@ -29,7 +30,9 @@ const ChangePassword = () => {
           },
           body:JSON.stringify(useremail) 
         });
+        props.setprogress(60)
         const jsondata = await forpass.json();
+        props.setprogress(100);
         setShowMessage({...showMessage,display:true,message:jsondata.message,success:jsondata.success});
         submit.innerText = "Continue"
         setuseremail({email:''});

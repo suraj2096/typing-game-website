@@ -1,0 +1,64 @@
+const imagesset = [{
+        id:1,
+        image:'../carbuyimages/carbuy1.png',
+        price:"100"
+},
+{
+    id:2,
+    image:'../carbuyimages/carbuy2.png',
+    price:"200"
+},
+{
+    id:3,
+    image:'../carbuyimages/carbuy3.png',
+    price:"300"
+},
+{
+    id:4,
+    image:'../carbuyimages/carbuy4.png',
+    price:"400"
+},
+{
+    id:5,
+    image:'../carbuyimages/carbuy5.png',
+    price:"500"
+},
+{
+    id:6,
+    image:'../carbuyimages/carbuy6.png',
+    price:"600"
+},
+{
+    id:7,
+    image:'../carbuyimages/carbuy7.png',
+    price:"700"
+},
+{
+    id:8,
+    image:'../carbuyimages/carbuy8.png',
+    price:"800"
+},
+{
+    id:9,
+    image:'../carbuyimages/carbuy9.png',
+    price:"900"
+},
+{
+    id:10,
+    image:'../carbuyimages/carbuy10.png',
+    price:"1000"
+},
+{
+    id:11,
+    image:'../carbuyimages/carbuy11.png',
+    price:"1000"
+},
+{
+    id:12,
+    image:'../carbuyimages/carbuy12.png',
+    price:"1000"
+}
+
+
+];
+module.exports = imagesset;

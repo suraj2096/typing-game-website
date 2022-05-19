@@ -27,6 +27,17 @@ router.post('/signup',body('email',"please enter the correct format email").isEm
 
     try{
         let {name,email,password} = req.body;
+        // here we will find user that will in database but not verified then only send a message we send a link to your gmail
+        let exitinguser = await signupModel.findOne({email});
+        console.log(exitinguser);
+        if(exitinguser.verified === false){
+          // here we create authicate collection 
+         let  authicateuser = await authicateModel({userId:exitinguser._id,token:crypto.randomBytes(32).toString("hex")}).save();
+         const url = `http://localhost:3000/user/login/user/${authicateuser.userId}/verify/${authicateuser.token}`
+        send(url,exitinguser,"verify your email","please click on the limk to verify your email ");
+        res.status(201).json({success:true,message:"you are successfully sign up we send a link to you mail acccount to login "});   
+        }
+        else{
         let hashpassword = await bcrypt.hash(password,salt);
         password = hashpassword;
         let signupuser = await signupModel({name,email,password}).save();
@@ -35,6 +46,7 @@ router.post('/signup',body('email',"please enter the correct format email").isEm
         const url = `http://localhost:3000/user/login/user/${authicateuser.userId}/verify/${authicateuser.token}`
         send(url,signupuser,"verify your email","please click on the limk to verify your email ");
         res.status(201).json({success:true,message:"you are successfully sign up we send a link to you mail acccount to login "});   
+        }
     }
     catch(error){
          console.log(error);

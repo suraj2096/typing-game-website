@@ -6,6 +6,7 @@ const loginsignrouter = require('./routers/loginsignrouter')
 const pararoute = require('./routers/pararoute');
 const playerDetails = require('./routers/gamedetailsRoute');
 const cargameroute = require('./routers/cargameRoute');
+const payemtroute = require('./routers/payment');
 const portNumber = 8000;
 app.use(cors()) //Enable All CORS Requests 
 
@@ -20,6 +21,8 @@ app.use('/firstgameplayerdetails',cargameroute);
 // second game endpoint or resource 
 app.use('/playerdetails',playerDetails);
 
+//  craating a payment api is here we will give payment router here for handle this api payment
+app.use('/payment',payemtroute);
 
 
 // here owr server will listen 

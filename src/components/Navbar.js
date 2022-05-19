@@ -2,6 +2,7 @@ import React, { useContext,useEffect} from 'react'
 import '../styles/navbar.css'
 import {Link, useNavigate} from 'react-router-dom'
 import Logincontext from '../contexts/login/Logincontext'
+import userlogo from '../images/logo.jpg'
 // import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 function Navbar() {
   const navigate = useNavigate();
@@ -89,7 +90,8 @@ function Navbar() {
         <li><Link to='/stats'>Profile</Link></li>
         <li><Link to='/matchhistory'>Match History</Link></li>
         <li><Link to='/leaderboard'>Leaderboard</Link></li>
-        {/* <li><Link to='/home'>home</Link></li> */}
+        <li><Link to='/carpurchase'>Car Purchase</Link></li>
+        <li><Link to='/cargarage'>Car Garage</Link></li>
         </ul>
         </div>
         {!dislogout && !localStorage.getItem('auth-token')?
@@ -98,6 +100,9 @@ function Navbar() {
         <Link to="/signup" className='btn'>Sign Up</Link>
         </div>
 :<div className='thirdChild'>
+   {/* <div classname="logos"> */}
+  <img  src={userlogo} alt="this is a user logo"/>
+    {/* </div> */}
   <h2>{name}</h2>
   <button onClick={logout} className='btn button'>Log Out</button>
 </div>}

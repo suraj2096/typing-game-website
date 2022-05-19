@@ -20,6 +20,7 @@ import { useState } from "react";
 import MatchHistory from "./components/MatchHistory";
 import Leaderboard from "./components/Leaderboard";
 import Home from "./components/home";
+import CarPurchase from "./components/CarPurchase";
 
 
 function App() {
@@ -52,7 +53,8 @@ function App() {
           {['/changepassword','/changePassword/change/:token'].map((element,index)=>{
               return <Route key={index} path={element} element={<ChangePassword/>}/>
           })}
-          <Route  path="/changepassword" element={<ChangePassword/>}/>
+          <Route  path="/changepassword" element={<ChangePassword setprogress={setprogress}/>}/>
+          <Route  path="/carpurchase" element={<CarPurchase setprogress={setprogress}/>}/>
           
           <Route  path="*" element={<Notfound />}/>
 

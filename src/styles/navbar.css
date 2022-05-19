@@ -51,7 +51,7 @@
 .secondChild ul li  a{
     color: white;
     text-decoration: none;
-    padding: 10px 25px;
+    padding: 10px 12px;
     font-size: 1.2rem;
     font-style: bold;
     text-transform: uppercase;
@@ -81,6 +81,15 @@
     left: 14px;
     color: white;
     font-size: 1rem;
+}
+.thirdChild img{
+    width: 55px;
+    height: 86%;
+    border: 1px solid white;
+    border-radius: 38px;
+    position: relative;
+    left: 18px;
+    background-color: white;
 }
 .btn{
     /* border: 2px solid black; */
