@@ -8,8 +8,10 @@ function LoginState(props) {
     const [date,setdate] = useState();
     // this state for choosing the game and work on regarding the game that is choosing
     const [chooseGame,setChooseGame] = useState('');
+    // choosen car
+    const [chooseCar,setChooseCar] = useState(undefined);
   return (
-   <Logincontext.Provider value={{showMessage,setShowMessage,name,setname,dislogout,setdislogout,date,setdate,chooseGame,setChooseGame}}>
+   <Logincontext.Provider value={{showMessage,setShowMessage,name,setname,dislogout,setdislogout,date,setdate,chooseGame,setChooseGame,chooseCar,setChooseCar}}>
         {props.children}
    </Logincontext.Provider>
   )

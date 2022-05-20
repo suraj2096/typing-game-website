@@ -27,7 +27,7 @@ let data = await fetch(url,{
 // props.setprogress(60);
 let jsondata = await data.json();
 // props.setprogress(100);
-// console.log(jsondata.getusercars.carpurcImage);
+// console.log(jsondata.getusercars.carpurcImage.equipped);
 if(jsondata.getusercars !== null){
   setUserCars(jsondata.getusercars.carpurcImage);
 }
@@ -208,7 +208,7 @@ event.target.innerText = "Buy Now";
                </div>
            </div>  
            <div className='secondchildpurchase'>
-            {imagesset.map(((element,index)=>{
+            {imagesset.map((element,index)=>{
               if(usercars === null || usercars.length === 0){
               return(
                    <div className='cars' key={element.id}> 
@@ -257,7 +257,7 @@ event.target.innerText = "Buy Now";
                          </div>
                        )
 
-            }))}
+            })}
            </div>
          </div>
       

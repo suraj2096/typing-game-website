@@ -5,6 +5,7 @@ const router = express.Router();
 const carBuyModel = require("../models/playerBuyCar");
 const fetchdata = require("../middleware/authtoken");
 const {key_id,key_secret} = require("../pass");
+const { resolveSoa } = require("dns");
 
 // payment send route
 router.post('/orders',async(req,res)=>{
@@ -101,5 +102,45 @@ router.get('/getusercars',fetchdata,async(req,res)=>{
          res.status(500).json({message:"Something went wrong"});
      }
 })
+
+// patch to update the equipped
+router.put('/carequipped',fetchdata,async(req,res)=>{
+    try{
+    const {carimage,equipped} = req.body;
+    let findcar = null;
+    // console.log({cars:carimage});
+    // console.log(typeof carimage);
+        const findequip = await carBuyModel.findOne({playerId:req.user});
+        // const iteratefind = findequip.carpurcImage;
+
+        findequip.carpurcImage.forEach(element => {
+            if(element.equipped){
+                findcar = element.cars;
+                return;
+            }
+        });
+        if(findcar != null){
+            await carBuyModel.updateOne({playerId:req.user,"carpurcImage.cars":findcar},{$set:{"carpurcImage.$.equipped":false}});
+            // res.status(200).json({message:"finding the first equipped",updateequip});
+        }
+            await carBuyModel.updateOne({playerId:req.user,"carpurcImage.cars":carimage},{$set:{"carpurcImage.$.equipped":equipped}});
+            res.status(200).json({message:"thanks for equip"});
+        
+        // console.log(findequip);
+        // if(findequip){
+            // return;
+            // res.status(200).json({message:"finding the first equipped",findequip});
+            // return; 
+            
+        // }
+    // The positional $ operator identifies an element in an array to update without explicitly specifying the position of the element in the array.
+    }
+    catch(error){
+        console.log(error);
+        res.status(400).json({error,message:"not equipped "});   
+    }
+})
+
+
 
 module.exports = router;

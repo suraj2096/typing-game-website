@@ -1,0 +1,240 @@
+.parentcarbox{
+    width: 100vw;
+    /* max-height: 120vh; */
+    background: linear-gradient(blue,#001122);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 30px; */
+    padding: 30px 0px;
+}
+.childcarbox{
+    width: 70vw;
+    min-height: 100vh;
+    border: 2px solid rgb(209, 183, 183);
+    overflow: hidden;
+    border-radius: 9px;
+}
+.childfirst{
+width: 100%;
+height: 30vw;
+background-color: grey;
+}
+.childsecond{
+width: 100%;
+height: auto;
+background-color: aqua;
+}
+.childfirstheader{
+    display: flex;
+    width: 100%;
+    height: 3.5vw;
+    background-color: #c8bebe;
+    justify-content: space-between;
+}
+.childfirstheader .contentfirstchild{
+    width: 40%;
+    /* border: 2px solid red; */
+    background-color: white;
+    /* transform: skewX(-20deg); */
+    transform: skewX(-20deg);
+    display: inline-block;
+    margin-left: -40px;
+    height: 100%;
+    padding-right: 40px;
+    padding: 0px 54px;
+    display: flex;
+}
+.contentfirstchild img{
+    width: 30%;
+    height: 81px;
+    /* position: absolute; */
+    position: relative;
+    top: 2px;
+    z-index: 4;
+    transform: skew(1deg, 10deg);
+}
+.contentfirstchild h1{
+    padding: 0px 13px;
+    font-size: 2.5rem;
+}
+.childfirstheader .navigationschildfirst{
+    width: 50%;
+    text-align: right;
+    padding: 0px 8px;
+ }
+ .navigationschildfirst a{
+    text-decoration: none;
+    position: relative;
+    top: 16px;
+    left: 14px;
+    color: white;
+    font-size: 1rem;
+    border: 2px solid black;
+    background-color: black;
+    margin: 0px 8px;
+    transition: all 3s ease-in-out;
+}
+.navigationschildfirst a:hover{
+    text-decoration: none;
+    position: relative;
+    /* top: 15px; */
+    left: 14px;
+    color: black;
+    font-size: 1rem;
+    border: 2px solid black;
+    background-color:white;
+    margin: 0px 18px;
+}
+.smbtn{
+    /* border: 2px solid black; */
+    /* margin: 0px 10px; */
+    padding: 9px 25px;
+    border-radius: 9px;
+    transition: all 2s;
+    cursor: pointer;
+}
+.childfirst .displayactivecar{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.displayactivecar> img{
+    width: 80%;
+    height: 85%;
+}
+
+.childsecond .childsecondheader{
+    display: flex;
+    width: 100%;
+    height: 3.5vw;
+    background-color: #c8bebe;
+    justify-content: space-between;
+}
+.childsecondheader .contentsecondchild{
+    width: 40%;
+    /* border: 2px solid red; */
+    background-color: white;
+    /* transform: skewX(-20deg); */
+    transform: skewX(-20deg);
+    display: inline-block;
+    margin-left: -40px;
+    height: 100%;
+    padding-right: 40px;
+    padding: 0px 54px;
+    display: flex;
+}
+.contentsecondchild img{
+    width: 30%;
+    height: 81px;
+    /* position: absolute; */
+    position: relative;
+    top: 1px;
+    z-index: 4;
+    transform: skew(1deg, 10deg);
+}
+.contentsecondchild h1{
+    padding: 0px 13px;
+    font-size: 2.5rem;
+}
+.childsecond .navigationschildsecond{
+    width: 50%;
+    text-align: right;
+    padding: 0px 8px;
+ }
+ .navigationschildsecond a{
+    text-decoration: none;
+    position: relative;
+    top: 16px;
+    left: 14px;
+    color: white;
+    font-size: 1rem;
+    border: 2px solid black;
+    background-color: black;
+    margin: 0px 14px;
+    transition: all 3s ease-in-out;
+}
+.navigationschildsecond a:hover{
+    text-decoration: none;
+    position: relative;
+    /* top: 15px; */
+    left: 14px;
+    color: black;
+    font-size: 1rem;
+    border: 2px solid black;
+    background-color:white;
+    margin: 0px 18px;
+}
+.selectcarscards{
+    width: 100%;
+    height: 50%;
+    /* height: auto; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    /* margin: 2px 45px; */
+    padding: 27px 24px;
+    /* background-color: gray; */
+}
+.selectcarscards .cars{
+    height: 15vw;
+    background-color: #daddda;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+}
+.cars> img{
+    box-sizing: border-box;
+    width: 21vw;
+    /* height: 162px; */
+    padding: 0px 37px;
+    padding-top: 29px;
+    cursor: pointer;
+    transition: transform 2s ease-in-out;
+
+}
+.cars> .carsimg:hover{
+           transform: scale(1.2);
+}
+.cars button{
+    position: absolute;
+    bottom: -6px;
+    width: 55%;
+    /* left: 31%; */
+    transform: translate(-50%, -50%);
+    left: 50%;
+    padding: 9px 0px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+    /* margin: 31px 0px; */
+    color: white;
+    background: black;
+}
+
+
+.Nocarsavailabel{
+    width: 100%;
+    height: 13.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Nocarsavailabel h1{
+    font-size: 2rem;
+   text-transform: capitalize;
+}

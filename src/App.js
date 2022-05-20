@@ -21,6 +21,7 @@ import MatchHistory from "./components/MatchHistory";
 import Leaderboard from "./components/Leaderboard";
 import Home from "./components/home";
 import CarPurchase from "./components/CarPurchase";
+import CarGarage from "./components/CarGarage";
 
 
 function App() {
@@ -55,7 +56,7 @@ function App() {
           })}
           <Route  path="/changepassword" element={<ChangePassword setprogress={setprogress}/>}/>
           <Route  path="/carpurchase" element={<CarPurchase setprogress={setprogress}/>}/>
-          
+          <Route  path="/cargarage" element={<CarGarage/>}/>
           <Route  path="*" element={<Notfound />}/>
 
         </Routes>

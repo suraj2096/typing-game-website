@@ -7,7 +7,12 @@ const Schema = new mongoose.Schema({
         required:true,
     },
     // here we create an array  of object means an array containing a set of object.............
-    carpurcImage:[{cars:String,index:Number}]
+    carpurcImage:[{cars:String,index:Number,equipped:{type:Boolean,default:false}}]
+    // // here equipped will also go 
+    // equipped:{
+    //     type:Boolean,
+    //     default:false
+    // }
 });
 const carBuyModel = new mongoose.model("carimagebuy",Schema);
 module.exports = carBuyModel;
