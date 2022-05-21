@@ -2,6 +2,7 @@ import React, { useContext, useEffect,useState,useRef} from 'react'
 import "../styles/carstore.css"
 import cargarageimg from '../images/cargarage.png'
 import Logincontext from '../contexts/login/Logincontext'
+import {Link} from 'react-router-dom'
 function CarGarage() {
   const car = useRef("");
   const {chooseCar,setChooseCar} = useContext(Logincontext);
@@ -170,8 +171,8 @@ function CarGarage() {
                    <h1>Active Car</h1>
                </div>
           <div className='navigationschildfirst'>
-                   <a className='smbtn' href="/plays">Start Race</a>
-                   <a className="smbtn" href="/stats">Buy Car</a>
+                   <Link className='smbtn' to="/cartypinggame">Start Race</Link>
+                   <Link className="smbtn" to="/carpurchase">Buy Car</Link>
                    <a className="smbtn" href="#owncars">My Cars</a>
                </div>
           </div>
@@ -191,8 +192,8 @@ function CarGarage() {
                    <h1>My Cars</h1>
                </div>  
           <div className='navigationschildsecond'>
-                   <a className='smbtn' href="/plays">Start Race</a>
-                   <a className="smbtn" href="/stats">Buy Car</a>
+                   <Link className='smbtn' to="/cartypinggame">Start Race</Link>
+                   <Link className="smbtn" to="/carpurchase">Buy Car</Link>
                </div>
           </div>
           <div>

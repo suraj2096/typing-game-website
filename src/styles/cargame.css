@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+}
+/* p1,com1,com2,com3 (text which is displayed at screen) */
+.playerlane .com1 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    left: 40vw;
+    top: 4vh;
+    display: none;
+}
+
+.playerlane .com2 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    left: 40vw;
+    top: 19vh;
+    display: none;
+}
+
+.playerlane .p1 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    left: 42.5vw;
+    top: 34vh;
+    display: none;
+}
+
+.playerlane .com3 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    left: 40vw;
+    top: 49vh;
+    display: none;
+}
+/* animation of com1,com2,com3 (text which is displayed at screen) */
+@keyframes com_mover {
+    from{
+        left: 40vw;
+    }
+    to{
+        left: -9vw;
+    }
+}
+/* animation of p1 (text which is displayed at screen) */
+@keyframes p1_mover {
+    from{
+        left: 42.5vw;
+    }
+    to{
+        left: -7vw;
+    }
+}
+/* starting black strip */
+.startstrip {
+    position: absolute;
+    top: 0vh;
+    z-index: 4;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(88, 88, 88);
+    border: 1px solid rgb(88, 88, 88);
+}
+/* ending black strip */
+.endstrip {
+    position: absolute;
+    top: 58.8vh;
+    z-index: 4;
+    width: 100%;
+    height: 9px;
+    background-color: rgb(88, 88, 88);
+    border: 1px solid rgb(88, 88, 88);
+}
+/* full road which have height of 60vh */
+.road {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(66, 60, 60);
+    /* background-image: linear-gradient(rgb(66, 60, 60) 0%, rgb(66, 60, 60) 24%, white 24%, white 26%, rgb(66, 60, 60) 26%, rgb(66, 60, 60) 50%, white 50%, white 52%, rgb(66, 60, 60) 52%, rgb(66, 60, 60) 75%, white 75%, white 77%,rgb(66, 60, 60) 77%,rgb(66, 60, 60) 100%); */
+}
+/* road 1 is here*/
+.road1{
+    width: 100%;
+      height: 8px;
+      background: linear-gradient(50deg,white 0%,white 70%,rgb(66, 60, 60) 70%,rgb(66, 60, 60) 100%);
+      background-size: 120px;
+      margin-top: 7.1%;
+      /* animation: road 1s linear infinite; */
+  }
+/* road 2 is here*/
+  .road2{
+    width: 100%;
+      height: 8px;
+      background: linear-gradient(50deg,white 0%,white 70%,rgb(66, 60, 60) 70%,rgb(66, 60, 60) 100%);
+      background-size: 120px;
+      margin-top: 7.1%;
+      /* animation: road 1s linear infinite; */
+  }
+  /* road 3 here */
+  .road3{
+    width: 100%;
+      height: 8px;
+      background: linear-gradient(50deg,white 0%,white 70%,rgb(66, 60, 60) 70%,rgb(66, 60, 60) 100%);
+      background-size: 120px;
+      margin-top: 7.1%;
+      /* animation: road 1s linear infinite; */
+  }
+  /*animation for road 1,2,3*/
+  @keyframes road {
+    0%{
+      background-position: 0px;
+    }
+    100%{
+      background-position: -120px;
+    }
+}
+  
+/* car1,car2,car3,car4 positions */
+.road .car {
+    position: absolute;
+    width: 140px;
+    z-index: 5;
+}
+
+.road .car1 {
+    top: 3.3vh;
+    display: none;
+}
+
+.road .car2 {
+    top: 18.2vh;
+    display: none;
+}
+
+.road .car3 {
+    top: 33.7vh;
+    display: none;
+}
+
+.road .car4 {
+    top: 48.1vh;
+    display: none;
+}
+/* car tilt */
+/* .cartilt{
+    animation: tilt 2s linear infinite;
+}
+@keyframes tilt {
+    100%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    0%{
+        transform: translateY(-5px);
+    }
+} */
+
+/* car1,car2,car3,car4 class which moves them before game starts */      /*linked 1*/
+.carmove {
+    animation: startcar 2s ease-out;
+    animation-direction: normal;
+}
+/* animation of car1,car2,car3,car4 which moves them before game starts */      /*linked 1*/
+@keyframes startcar {
+    from {
+        margin-left: -410px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+/*  */
+.carmove2{
+    animation: startcar2 2.5s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar2 {
+    from {
+        left: 0vw;
+    }
+
+    to {
+        left: 10vw;
+    }
+}
+
+.carmove3{
+    animation: startcar3 600ms ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar3 {
+    from {
+        left: 10vw;
+    }
+
+    to {
+        left: 11vw;
+    }
+}
+.carmove4{
+    animation: startcar4 600ms ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar4 {
+    from {
+        left: 11vw;
+    }
+
+    to {
+        left: 12vw;
+    }
+}
+.carmove5{
+    animation: startcar5 600ms ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar5 {
+    from {
+        left: 12vw;
+    }
+
+    to {
+        left: 13vw;
+    }
+}
+.carmove6{
+    animation: startcar6 600ms ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar6 {
+    from {
+        left: 13vw;
+    }
+
+    to {
+       left: 15vw;
+    }
+}
+.carmove7{
+    animation: startcar7 600ms ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar7 {
+    from {
+        margin-left: 15vw;
+    }
+
+    to {
+        margin-left: 17.5vw;
+    }
+}
+.carmove8{
+    animation: startcar8 600ms ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar8 {
+    from {
+        margin-left: 17.5vw;
+    }
+
+    to {
+        margin-left: 20vw;
+    }
+}
+.carmove9{
+    animation: startcar9 1.5s ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar9 {
+    from {
+        margin-left: 20vw;
+    }
+
+    to {
+        margin-left: 30vw;
+    }
+}
+.carmove10{
+    animation: startcar10 800ms ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar10 {
+    from {
+        margin-left: 30vw;
+    }
+
+    to {
+        margin-left: 35vw;
+    }
+}
+.carmove11{
+    animation: startcar11 700ms ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar11 {
+    from {
+        margin-left: 35vw;
+    }
+
+    to {
+        margin-left: 40vw;
+    }
+}
+.carmove12{
+    animation: startcar12 1.5s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar12 {
+    from {
+        margin-left: 40vw;
+    }
+
+    to {
+        margin-left: 55vw;
+    }
+}
+.carmove13{
+    animation: startcar13 1.2s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar13 {
+    from {
+        margin-left: 55vw;
+    }
+
+    to {
+        margin-left: 70vw;
+    }
+}
+.carmove14{
+    animation: startcar14 800ms linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar14 {
+    from {
+        margin-left: 70vw;
+    }
+
+    to {
+        margin-left: 72vw;
+    }
+}
+.carmove15{
+    animation: startcar15 800ms linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar15 {
+    from {
+        margin-left: 72vw;
+    }
+
+    to {
+        margin-left: 74vw;
+    }
+}
+.carmove16{
+    animation: startcar16 800ms linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar16 {
+    from {
+        margin-left: 74vw;
+    }
+
+    to {
+        margin-left: 76vw;
+    }
+}
+.carmove17{
+    animation: startcar17 800ms linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar17 {
+    from {
+        margin-left: 76vw;
+    }
+
+    to {
+        margin-left: 78vw;
+    }
+}
+.carmove18{
+    animation: startcar18 800ms linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar18 {
+    from {
+        margin-left: 78vw;
+    }
+
+    to {
+        margin-left: 80vw;
+    }
+}
+.carmove19{
+    animation: startcar19 1.5s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar19 {
+    from {
+        margin-left: 80vw;
+    }
+
+    to {
+        margin-left: 95vw;
+    }
+}
+.carmove20{
+    animation: startcar20 1s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes startcar20 {
+    from {
+        margin-left: 95vw;
+    }
+
+    to {
+        margin-left: 110vw;
+    }
+}
+
+/*  */
+/* startline position */
+.startline {
+    position: absolute;
+    left: 23.3vh;
+    z-index: 3;
+    top: -4vh;
+    transform: rotate(90deg);
+    transform-origin: 0%;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(139, 136, 136);
+}
+/* animation of start line */
+@keyframes startlineleftmove {
+    from{
+        left: 23.3vh;
+    }
+    to{
+        left: -5vh;
+    }
+}
+/* startline strips */
+.strip1,
+.strip3 {
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(90deg, white 0%, white 50%, black 50%, black 100%);
+    background-size: 50px;
+    border: 1px solid black;
+}
+
+.strip2,
+.strip4 {
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(90deg, black 0%, black 50%, white 50%, white 100%);
+    background-size: 50px;
+    border: 1px solid black;
+}
+/* keyboard img is here */
+#fixbox {
+    width: 100%;
+    height: 40vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.799);
+}
+
+#fixbox #keyimg {
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/keyboard\ .jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+/* paragraph code in which text for race is displayed */
+.typing-texts p {
+    position: fixed;
+    width: 65vw;
+    height: 28vh;
+    /* border: 2px solid black; */
+    top: 62vh;
+    left: 17.5vw;
+    z-index: 2;
+    font-size: 21px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-spacing: 7px;
+    line-height: 33px;
+    word-break: break-all;
+    overflow-y: auto;
+}
+/* speed of car in wpm  */
+.speed {
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    top: 88vh;
+    left: 8px;
+    z-index: 2;
+    color: rgb(162, 159, 159);
+}
+
+.speed span {
+    font-size: 30px;
+    color: white;
+}
+
+.speed small {
+    font-size: 20px;
+}
+/* time taken by car */
+.timer {
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    right: 27px;
+    top: 88vh;
+    z-index: 2;
+    color: rgb(162, 159, 159);
+}
+
+.timer span {
+    font-size: 30px;
+    color: white;
+}
+
+.timer small {
+    font-size: 27px;
+}
+/* button1 having actual functionality */
+.button1 {
+    position: fixed;
+    left: 15.1vw;
+    top: 90vh;
+    z-index: 2;
+    border: none;
+    outline: none;
+    width: 69.8vw;
+    padding: 8px 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: #17a2b8;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.button1:active {
+    transform: scale(0.98);
+}
+/* button2 having no functionality */
+.button2 {
+    position: fixed;
+    left: 15.1vw;
+    top: 90vh;
+    z-index: 1;
+    border: none;
+    outline: none;
+    width: 69.8vw;
+    padding: 8px 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: #7fa0a9;
+    font-size: 25px;
+    border-radius: 10px;
+}
+/* input field  */
+.input-field {
+    position: fixed;
+    top: 60vh;
+    z-index: -999;
+    opacity: 0;
+}
+/* code for correct,incorrect and active character confirmation */
+.typing-texts p span.correct {
+    color: #56964f;
+}
+
+.typing-texts p span.incorrect {
+    background-color: #ffc0cb;
+    color: #cb3439;
+    outline: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.typing-texts p span {
+    position: relative;
+}
+
+.typing-texts p span.active {
+    color: #17a2b8;
+}
+
+.typing-texts p span.active::before {
+    content: "";
+    background-color: #17a2b8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+/* GAME OVER text */
+.typing-texts p.gameover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    color: #24671d;
+    opacity: 0;
+    animation: goblink 3s ease-out infinite;
+}
+
+@keyframes goblink {
+    50% {
+        opacity: 1;
+    }
+}
+/* count 3,2,1,GO! */
+.typing-texts p.count321 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    z-index: 3;
+}
+/* circle of 3,2,1,GO! */
+.circle {
+    position: fixed;
+    height: 170px;
+    width: 170px;
+    z-index: 2;
+    left: 44.5vw;
+    bottom: 12vh;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: none;
+}
+/* incorrect character */
+.incorrectshow {
+    z-index: 2;
+    font-size: 30px;
+    top: 30vh;
+    left: 42.5vw;
+    position: fixed;
+    color: red;
+    display: none;
+}

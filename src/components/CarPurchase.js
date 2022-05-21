@@ -4,6 +4,7 @@ import imagesset from '../imagesget/ImagesGet';
 import keys from '../images/carkeys.png'
 import axios from 'axios';
 import success from '../images/success.png';
+import {Link} from 'react-router-dom'
 function CarPurchase(props) {
 const [usercars,setUserCars] = useState([]);
 const i = useRef(0);
@@ -203,8 +204,8 @@ event.target.innerText = "Buy Now";
                    <h1>Car Store</h1>
                </div>
                <div className='navigationfirstchild'>
-                   <a className='smbtn' href="/plays">Start Race</a>
-                   <a className="smbtn" href="/stats">My Profile</a>
+                   <Link className='smbtn' to="/cartypinggame">Start Race</Link>
+                   <Link className="smbtn" to="/cargarage">Car Garage</Link>
                </div>
            </div>  
            <div className='secondchildpurchase'>

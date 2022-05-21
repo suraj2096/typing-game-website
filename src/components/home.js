@@ -22,7 +22,7 @@ function Home() {
         </div>
         <div className='cardsofhome'>
          <div className='cardfirstchild'>
-             <Link to="/cartyping" onClick={cargameonclick} className='abutton'>Play Now</Link>
+             <Link to="/cartypinggame" onClick={cargameonclick} className='abutton'>Play Now</Link>
              </div>   
          <div className='cardsecondchild'>
          <Link to="/play" onClick={typeonclick} className='abutton'>Play Now</Link>

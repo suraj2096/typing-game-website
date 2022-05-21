@@ -6,7 +6,7 @@ import userlogo from '../images/logo.jpg'
 // import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 function Navbar() {
   const navigate = useNavigate();
-  let {name,setname,setShowMessage,dislogout,setdislogout,setdate} = useContext(Logincontext);
+  let {name,setname,setShowMessage,dislogout,setdislogout,setdate,chooseGame} = useContext(Logincontext);
   // let logoutenabled = useRef(false);
     // this use effect for fetch user name 
     useEffect(()=>{
@@ -85,13 +85,19 @@ function Navbar() {
     <nav className='navbar'>
         <h1>Type Rush</h1>
         <div className='secondChild'>
-        <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/stats'>Profile</Link></li>
-        <li><Link to='/matchhistory'>Match History</Link></li>
+        <ul  style={{justifyContent:`${chooseGame==='cartype'?"left":"center"}`}}>
+        <li><Link to='/' style={{padding:`${(chooseGame!=='' || chooseGame==="cartype") && chooseGame!=="simpletype" ?"10px 12px":"10px 15px"}`}}>Home</Link></li>
+        <li><Link to='/stats' style={{padding:`${(chooseGame!=='' || chooseGame==="cartype") && chooseGame!=="simpletype" ?"10px 12px":"10px 15px"}`}}>Profile</Link></li>
+        <li><Link to='/matchhistory' style={{padding:`${(chooseGame!=='' || chooseGame==="cartype") && chooseGame!=="simpletype" ?"10px 12px":"10px 15px"}`}}>Match History</Link></li>
         <li><Link to='/leaderboard'>Leaderboard</Link></li>
-        <li><Link to='/carpurchase'>Car Purchase</Link></li>
-        <li><Link to='/cargarage'>Car Garage</Link></li>
+        {(chooseGame!=='' || chooseGame==="cartype") && chooseGame!=="simpletype" ?
+        <li><Link to='/carpurchase' style={{padding:`${(chooseGame!=='' || chooseGame==="cartype") && chooseGame!=="simpletype" ?"10px 12px":"10px 15px"}`}}>Car Purchase</Link></li>:
+        <li></li>
+  }
+   {(chooseGame!=='' || chooseGame==="cartype") && chooseGame!=="simpletype" ?
+        <li><Link to='/cargarage' style={{padding:`${chooseGame!=='' || chooseGame==="cartype"?"10px 12px":"10px 15px"}`}}>Car Garage</Link></li>:
+        <li></li>
+  }
         </ul>
         </div>
         {!dislogout && !localStorage.getItem('auth-token')?

@@ -32,11 +32,11 @@
     font-size: 2.4rem;
     color: white;
     color: black;
-    /* line-height: 4rem; */
+    line-height: 6rem;
     word-spacing: 4px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    padding: 13px 15px;
+    padding: 0px 15px;
 }
 .parenthome .cardsofhome{
     width: 100%;

@@ -22,6 +22,7 @@ import Leaderboard from "./components/Leaderboard";
 import Home from "./components/home";
 import CarPurchase from "./components/CarPurchase";
 import CarGarage from "./components/CarGarage";
+import CarTyping from "./components/CarTyping";
 
 
 function App() {
@@ -29,8 +30,9 @@ function App() {
   return (
     <div>
       <LoginState>
-    <Router>                        
-     <Navbar/>
+    <Router>   
+      <Navbar/>
+                    
      <LoadingBar
       height={3.5}
       loaderSpeed={500}
@@ -57,6 +59,7 @@ function App() {
           <Route  path="/changepassword" element={<ChangePassword setprogress={setprogress}/>}/>
           <Route  path="/carpurchase" element={<CarPurchase setprogress={setprogress}/>}/>
           <Route  path="/cargarage" element={<CarGarage/>}/>
+          <Route  path="/cartypinggame" element={<CarTyping/>}/>
           <Route  path="*" element={<Notfound />}/>
 
         </Routes>
